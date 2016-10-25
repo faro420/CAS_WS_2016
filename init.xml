@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<DOCTYPE ELEMENTLIST SYSTEM "elements.dtd">
+<Ort name = "">
+	<angebunden>
+		<list>Strasse</list>		
+	</angebunden>
+	<erreichbar>
+		<list>FunkImpl</list>
+	</erreichbar>
+</Ort>
+<Strasse>
+	<name>"TEST"</name>
+	<anfang>Ort</anfang>
+	<ende>Ort></ende>
+	<kosten>123</kosten>
+</Strasse>
+<Akteur>
+	<id>""</id>
+</Akteur>
+<LocalServices>
+	<list>TankstelleImpl</list>
+	<list>BankImpl</list>
+	<list>HandelsregisterImpl</list>
+	<list>BoerseImpl</list>
+	<list>SchwarzesBrettImpl</list>		
+</LocalServices>
+<Ereignisgenerator>
+	<zustaendigkeitsBereich>
+		<list>Ort</list>
+	</zustaendigkeitsBereich>
+	<aktivitaetsrate>123</aktivitaetsrate>
+</Ereignisgenerator>

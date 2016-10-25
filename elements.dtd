@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<!ELEMENT Ort (angebunden*, erreichbar*)*>
+<!ELEMENT angebunden (Strasse)*>
+<!ELEMENT erreichbar (FunkImpl)?>
+<!ELEMENT Strasse (anfang?, ende?)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT anfang (Ort)?>
+<!ELEMENT ende (Ort)?>
+<!ELEMENT Akteur (#PCDATA)>
+<!ELEMENT Ereignisgenerator (zustaendigkeitsbereich)>
+<!ELEMENT zustaendigkeitsbereich (Ort)*>
+<!ELEMENT aktivitaetsrate (#PCDATA)>
+<!ATTLIST Strasse name CDATA #REQIRED>
+<!ATTLIST Strasse kosten CDATA #REQUIRED>
+<!ATTLIST Ereignisgenerator aktivitaetsrate CDATA #REQUIRED>
