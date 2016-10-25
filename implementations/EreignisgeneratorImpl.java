@@ -10,13 +10,31 @@ import interfaces.Ort;
  */
 
 public class EreignisgeneratorImpl implements Ereignisgenerator {
-	
+
 	private ArrayList<Ort> zustaendigkeitsBereich;
 	private int aktivitaetsrate;
 
-	public EreignisgeneratorImpl() {
+	private EreignisgeneratorImpl() {
 
-	} 
-	
+	}
 
+	public ArrayList<Ort> getZustaendigkeitsBereich() {
+		return zustaendigkeitsBereich;
+	}
+
+	public void setZustaendigkeitsBereich(ArrayList<Ort> zustaendigkeitsBereich) {
+		this.zustaendigkeitsBereich = zustaendigkeitsBereich;
+	}
+
+	public int getAktivitaetsrate() {
+		return aktivitaetsrate;
+	}
+
+	public void setAktivitaetsrate(int aktivitaetsrate) {
+		this.aktivitaetsrate = aktivitaetsrate;
+	}
+
+	public static EreignisgeneratorImpl createEreignisgeneratorImpl() {
+		return null;
+	}
 }

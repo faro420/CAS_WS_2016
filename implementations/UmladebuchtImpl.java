@@ -6,10 +6,22 @@ import interfaces.Auftrag;
 import interfaces.LocalServices;
 
 public class UmladebuchtImpl implements LocalServices {
-	
+
 	private ArrayList<Auftrag> verfuegbar;
 
-	public UmladebuchtImpl() {
-	} 
-	
+	private UmladebuchtImpl() {
+	}
+
+	public ArrayList<Auftrag> getVerfuegbar() {
+		return verfuegbar;
+	}
+
+	public void setVerfuegbar(ArrayList<Auftrag> verfuegbar) {
+		this.verfuegbar = verfuegbar;
+	}
+
+	public static UmladebuchtImpl createUmladebuchtImpl() {
+		return null;
+	}
+
 }

@@ -9,8 +9,19 @@ public class FunkImpl implements LocalServices {
 
 	private ArrayList<Ort> verfuegbar;
 
-	public FunkImpl() {
-		
+	private FunkImpl() {
+
 	}
-	
+
+	public ArrayList<Ort> getVerfuegbar() {
+		return verfuegbar;
+	}
+
+	public void setVerfuegbar(ArrayList<Ort> verfuegbar) {
+		this.verfuegbar = verfuegbar;
+	}
+
+	public static FunkImpl createFunkImpl() {
+		return null;
+	}
 }
