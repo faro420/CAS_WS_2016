@@ -7,6 +7,7 @@ import interfaces.LocalServices;
 public class BankImpl implements LocalServices {
 
 	private ArrayList<Konto> konten;
+	private static BankImpl instance;
 
 	private BankImpl() {
 
@@ -21,7 +22,10 @@ public class BankImpl implements LocalServices {
 	}
 
 	public static BankImpl createBankImpl() {
-		return null;
+		if (BankImpl.instance == null) {
+			BankImpl.instance = new BankImpl();
+		}
+		return BankImpl.instance;
 	}
 
 }

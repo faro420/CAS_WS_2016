@@ -8,6 +8,7 @@ import interfaces.Strassennetz;
 public class StrassennetzImpl implements Strassennetz {
 
 	private ArrayList<Ort> orte;
+	private static StrassennetzImpl instance;
 
 	private StrassennetzImpl() {
 	}
@@ -20,7 +21,11 @@ public class StrassennetzImpl implements Strassennetz {
 		this.orte = orte;
 	}
 
-	public static StrassennetzImpl createStrassennetzImpl() {
-		return null;
+	public static synchronized StrassennetzImpl createStrassennetzImpl() {
+		if (StrassennetzImpl.instance == null) {
+			StrassennetzImpl.instance = new StrassennetzImpl();
+		}
+		return StrassennetzImpl.instance;
+
 	}
 }
