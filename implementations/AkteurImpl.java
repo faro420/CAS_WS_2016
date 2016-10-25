@@ -11,6 +11,7 @@ public abstract class AkteurImpl implements Akteur {
 
 	}
 
+	private String actorID;
 	private ArrayList<Auftrag> auftraege = new ArrayList<Auftrag>();
 	private Geldtyp kontostand;
 	private ArrayList<Akteur> bekannte;
@@ -35,7 +36,16 @@ public abstract class AkteurImpl implements Akteur {
 		return bekannte;
 	}
 
+	public String getActorID() {
+		return actorID;
+	}
+
+	public void setActorID(String actorID) {
+		this.actorID = actorID;
+	}
+
 	public void setBekannte(ArrayList<Akteur> bekannte) {
 		this.bekannte = bekannte;
 	}
+
 }

@@ -7,6 +7,7 @@ public class StrasseImpl implements Strasse {
 
 	private Ort start, ende;
 	private int kosten;
+	private String name;
 
 	private StrasseImpl() {
 	}
@@ -33,6 +34,14 @@ public class StrasseImpl implements Strasse {
 
 	public void setKosten(int kosten) {
 		this.kosten = kosten;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public static StrasseImpl createStrasseImpl() {
