@@ -1,19 +1,15 @@
 <?xml version="1.0" ?>
 <DOCTYPE ELEMENTLIST SYSTEM "elements.dtd">
-<Ort name = "">
-	<angebunden>
-		<list>Strasse</list>		
-	</angebunden>
-	<erreichbar>
-		<list>FunkImpl</list>
-	</erreichbar>
+<Ort id = "">
 </Ort>
-<Strasse>
-	<name>"TEST"</name>
-	<anfang>Ort</anfang>
-	<ende>Ort></ende>
+<Strasse id="TEST">
+	<anfang>OrtName</anfang>
+	<ende>OrtName</ende>
 	<kosten>123</kosten>
 </Strasse>
+<FunkImpl id="TEST">
+	<list>Ort</list>
+</FunkImpl>
 <Akteur>
 	<id>""</id>
 </Akteur>

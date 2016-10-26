@@ -2,15 +2,19 @@ package implementations;
 
 import java.util.ArrayList;
 
-import interfaces.LocalServices;
+import interfaces.Funk;
 import interfaces.Ort;
 
-public class FunkImpl implements LocalServices {
+public class FunkImpl implements Funk {
 
 	private ArrayList<Ort> verfuegbar;
 
-	private FunkImpl() {
-
+	public FunkImpl() {
+		this(new ArrayList<Ort>());
+	}
+	
+	public FunkImpl(ArrayList<Ort> verfuegbar) {
+		this.verfuegbar = verfuegbar;
 	}
 
 	public ArrayList<Ort> getVerfuegbar() {
@@ -20,8 +24,8 @@ public class FunkImpl implements LocalServices {
 	public void setVerfuegbar(ArrayList<Ort> verfuegbar) {
 		this.verfuegbar = verfuegbar;
 	}
-
-	public static FunkImpl createFunkImpl() {
-		return null;
+	
+	public void setVerfuegbar(Ort ort) {
+		this.verfuegbar.add(ort);
 	}
 }

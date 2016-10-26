@@ -11,9 +11,17 @@ public class OrtImpl implements Ort {
 	private ArrayList<Strasse> angebunden;
 	private ArrayList<FunkImpl> erreichbar;
 
-	private OrtImpl() {
+	public OrtImpl() {
+		this("", new ArrayList<Strasse>(), new ArrayList<FunkImpl>());
 	}
 
+	public OrtImpl(String name, ArrayList<Strasse> angebunden, ArrayList<FunkImpl> erreichbar) {
+		super();
+		this.name = name;
+		this.angebunden = angebunden;
+		this.erreichbar = erreichbar;
+	}
+	
 	public String getName() {
 		return name;
 	}
@@ -40,6 +48,12 @@ public class OrtImpl implements Ort {
 
 	public static OrtImpl createOrtImpl() {
 		return null;
+	}
+
+	@Override
+	public void setAngebunden(Strasse angebunden) {
+		this.angebunden.add(angebunden);
+		
 	}
 
 }

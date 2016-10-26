@@ -1,5 +1,6 @@
 package implementations;
 
+
 import interfaces.Ort;
 import interfaces.Strasse;
 
@@ -9,7 +10,15 @@ public class StrasseImpl implements Strasse {
 	private int kosten;
 	private String name;
 
-	private StrasseImpl() {
+	public StrasseImpl() {
+		this(Ort.create(),Ort.create(),0,"") ;
+	}
+	
+	public StrasseImpl(Ort start, Ort ende, int kosten, String name) {
+		this.start = start;
+		this.ende = ende;
+		this.kosten = kosten;
+		this.name = name;
 	}
 
 	public Ort getStart() {
@@ -42,10 +51,6 @@ public class StrasseImpl implements Strasse {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public static StrasseImpl createStrasseImpl() {
-		return null;
 	}
 
 }
